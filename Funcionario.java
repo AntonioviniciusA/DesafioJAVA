@@ -360,7 +360,7 @@ public class Funcionario {
     public static void status() {
         double totalA, totalDeSalario = 0;
         for (Funcionario funcionario : funcionarios) {
-            totalDeSalario += funcionario.getSalario();
+            totalDeSalario += funcionario.valorTotalPago;
             System.out.println(" salario com beneficios: " + funcionario.getNome() +
                     " R$ " + (funcionario.getSalario() + funcionario.getBeneficioPago()));
         }
