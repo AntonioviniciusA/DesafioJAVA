@@ -94,7 +94,6 @@ public class Funcionario {
         return salario;
     }
 
-    // Método corrigido para calcular o salário
     public void setSalario() {
         if (getNomeCargo().equals("Secretário")) {
             this.salario = salarioBase + (getAnosDeServico() * getSomaPAno());
@@ -334,7 +333,7 @@ public class Funcionario {
                 String vendedorNome = funcionario.getNome();
                 Double valor = vendas.get(vendedorNome).get(mesDesejado);
                 if (valor != null) {
-                    beneficioPagoVend = valor * 0.3; // Calcula o benefício do vendedor
+                    beneficioPagoVend = valor * 0.3;
                 }
                 salario = beneficioPagoVend + funcionario.getSalario();
                 R = funcionario.getNome();
@@ -386,7 +385,6 @@ public class Funcionario {
     }
 
     public static void main(String[] args) {
-        // Adicionando funcionários e seus detalhes
         funcionarios.add(new Funcionario("Jorge Carvalho", "Secretário", 7000.00, 1000.00, "20% sobre o salário",
                 LocalDate.of(2018, 1, 1)));
         funcionarios.add(new Funcionario("Maria Souza", "Secretário", 7000.00, 1000.00, "20% sobre o salário",
