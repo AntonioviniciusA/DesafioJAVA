@@ -360,13 +360,19 @@ public class Funcionario {
     public static void status() {
         double totalA, totalDeSalario = 0;
         for (Funcionario funcionario : funcionarios) {
-            totalDeSalario += funcionario.valorTotalPago;
-            System.out.println(" salario com beneficios: " + funcionario.getNome() +
-                    " R$ " + (funcionario.getSalario() + funcionario.getBeneficioPago()));
+            totalDeSalario += (funcionario.getSalario() + funcionario.getBeneficioPago());
+            // System.out.println("texte de soma : " + totalDeSalario);
         }
         totalA = totalDeSalario + calcularBeneficioTotal();
 
         System.out.println("||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+        /*
+         * teste de salario
+         * 
+         * for (Funcionario funcionario : funcionarios) {
+         * System.out.println(funcionario.getNome() + funcionario.getSalario());
+         * }
+         */
 
         System.out.println("Total pago de salario com beneficios a todos os funcionários: R$ " + totalA);
 
@@ -379,8 +385,20 @@ public class Funcionario {
         System.out.println("Total pago em salarios para todos os funcionarios: R$ " + totalB);
 
         System.out.println("||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+        System.out.println("Quem recebeu maior beneficio?");
+        System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||| \n\n");
         maiorBeneficio();
+        System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||| \n\n");
+
+        System.out.println("||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+        System.out.println("Quem Vendeu mais");
+        System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||| \n\n");
         vendeuMais();
+        System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||| \n\n");
+
+        System.out.println("||||||||||||||||||||||||||||||||||||||||||||||||||||||");
+        System.out.println("Quem recebeu mais?");
+        System.out.println("|||||||||||||||||||||||||||||||||||||||||||||||||||||| \n\n");
         recebeuMais();
     }
 
